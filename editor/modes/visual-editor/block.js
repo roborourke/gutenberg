@@ -26,8 +26,8 @@ import {
 	mergeBlocks,
 	insertBlocks,
 	clearSelectedBlock,
-	startTypingInBlock,
-	stopTypingInBlock,
+	startTyping,
+	stopTyping,
 } from '../../actions';
 import {
 	getPreviousBlock,
@@ -39,7 +39,7 @@ import {
 	isBlockSelected,
 	isBlockMultiSelected,
 	isFirstMultiSelectedBlock,
-	isTypingInBlock,
+	isTypingInEditor,
 } from '../../selectors';
 
 function FirstChild( { children } ) {
@@ -318,7 +318,7 @@ class VisualEditorBlock extends Component {
 
 		// Generate the wrapper class names handling the different states of the block.
 		const { isHovered, isSelected, isMultiSelected, isFirstMultiSelected, isTyping, focus } = this.props;
-		const showUI = isSelected && ( ! isTyping || ! focus.collapsed );
+		const showUI = isSelected && ( ! isTyping || focus.collapsed === false );
 		const wrapperClassname = classnames( 'editor-visual-editor__block', {
 			'is-selected': showUI,
 			'is-multi-selected': isMultiSelected,
@@ -404,7 +404,7 @@ export default connect(
 			isFirstMultiSelected: isFirstMultiSelectedBlock( state, ownProps.uid ),
 			isHovered: isBlockHovered( state, ownProps.uid ),
 			focus: getBlockFocus( state, ownProps.uid ),
-			isTyping: isTypingInBlock( state, ownProps.uid ),
+			isTyping: isTypingInEditor( state ),
 			order: getBlockIndex( state, ownProps.uid ),
 		};
 	},
@@ -428,11 +428,11 @@ export default connect(
 		},
 
 		onStartTyping() {
-			dispatch( startTypingInBlock( ownProps.uid ) );
+			dispatch( startTyping() );
 		},
 
 		onStopTyping() {
-			dispatch( stopTypingInBlock( ownProps.uid ) );
+			dispatch( stopTyping() );
 		},
 
 		onHover() {
