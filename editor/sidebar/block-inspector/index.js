@@ -16,8 +16,8 @@ import { Panel, PanelBody } from 'components';
 import './style.scss';
 import { getSelectedBlock } from '../../selectors';
 
-const BlockInspector = ( { selectedBlock } ) => {
-	if ( ! selectedBlock ) {
+const BlockInspector = ( { hasSelectedBlock } ) => {
+	if ( ! hasSelectedBlock ) {
 		return <span className="editor-block-inspector__no-blocks">{ __( 'No block selected.' ) }</span>;
 	}
 
@@ -33,7 +33,7 @@ const BlockInspector = ( { selectedBlock } ) => {
 export default connect(
 	( state ) => {
 		return {
-			selectedBlock: getSelectedBlock( state ),
+			hasSelectedBlock: !! getSelectedBlock( state ),
 		};
 	}
 )( BlockInspector );
