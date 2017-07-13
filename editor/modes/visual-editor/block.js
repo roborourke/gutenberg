@@ -22,6 +22,7 @@ import BlockMover from '../../block-mover';
 import BlockRightMenu from '../../block-settings-menu';
 import BlockSwitcher from '../../block-switcher';
 import {
+	updateBlockAttributes,
 	focusBlock,
 	mergeBlocks,
 	insertBlocks,
@@ -122,12 +123,7 @@ class VisualEditorBlock extends Component {
 
 	setAttributes( attributes ) {
 		const { block, onChange } = this.props;
-		onChange( block.uid, {
-			attributes: {
-				...block.attributes,
-				...attributes,
-			},
-		} );
+		onChange( block.uid, attributes );
 	}
 
 	maybeHover() {
@@ -409,13 +405,8 @@ export default connect(
 		};
 	},
 	( dispatch, ownProps ) => ( {
-		onChange( uid, updates ) {
-			dispatch( {
-				type: 'UPDATE_BLOCK',
-				uid,
-				updates,
-			} );
-		},
+		onChange: updateBlockAttributes,
+
 		onSelect() {
 			dispatch( {
 				type: 'TOGGLE_BLOCK_SELECTED',
