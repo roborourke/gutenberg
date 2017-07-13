@@ -25,8 +25,8 @@ const BlockInspector = ( { hasSelectedBlock } ) => {
 	return (
 		<Panel>
 			<PanelBody>
-				<BlockInspectorClassName />
 				<Slot name="Inspector.Controls" />
+				<BlockInspectorClassName />
 			</PanelBody>
 		</Panel>
 	);
