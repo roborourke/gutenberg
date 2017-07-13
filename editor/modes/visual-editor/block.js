@@ -406,7 +406,9 @@ export default connect(
 		};
 	},
 	( dispatch, ownProps ) => ( {
-		onChange: updateBlockAttributes,
+		onChange( uid, attributes ) {
+			dispatch( updateBlockAttributes( uid, attributes ) );
+		},
 
 		onSelect() {
 			dispatch( {
@@ -450,7 +452,9 @@ export default connect(
 			dispatch( focusBlock( ...args ) );
 		},
 
-		onRemove: removeBlocks,
+		onRemove( uids ) {
+			dispatch( removeBlocks( uids ) );
+		},
 
 		onMerge( ...args ) {
 			dispatch( mergeBlocks( ...args ) );
