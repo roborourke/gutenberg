@@ -1,4 +1,7 @@
 build
+build-module
 coverage
-vendor
 node_modules
+packages/block-serialization-spec-parser
+test/e2e/test-plugins
+vendor

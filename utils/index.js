@@ -1,3 +1,3 @@
-import * as keycodes from './keycodes';
-
-export { keycodes };
+// Deprecations
+export * from './deprecated';
+export * from './mediaupload';

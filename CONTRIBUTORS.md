@@ -2,7 +2,7 @@
 
 Gutenberg is built by many contributors and volunteers. Thanks to all of them for their work!
 
-This list is manually curated to include valuable contributions by volunteers that do not include code, such as user testing, providing feedback, or mockups. Please edit this list to include new contributors as they come in. There is no particular order to this list. If you or someone else were omitted from this list, we assure you that was not intentional. Please let us know and we'll add you.
+This list is manually curated to include valuable contributions by volunteers that do not include code, such as user testing, providing feedback, or mockups. Please edit this list to include new contributors as they come in. There is no particular order to this list. If you or someone else were omitted from this list, we assure you that was not intentional. Please let us know and we'll add you. For volunteers who contributed their translations, your names are listed on [WordPress Translate site here](https://translate.wordpress.org/projects/wp-plugins/gutenberg/contributors).
 
 | GitHub Username | WordPress.org Username|
 | --------------- | --------------------- |
@@ -43,7 +43,7 @@ This list is manually curated to include valuable contributions by volunteers th
 | @lamosty | |
 | @willybahuaud | |
 | @maurobringolf | |
-| @aaronjorbin | |
+| @aaronjorbin | @jorbin |
 | @spocke | |
 | @androb | |
 | @annaephox | |
@@ -70,3 +70,34 @@ This list is manually curated to include valuable contributions by volunteers th
 | @shaunandrews | |
 | @hugobaeta | |
 | @mizejewski | |
+| @buzztone | |
+| @mathetos | |
+| @GaryJones | |
+| @jasonagnew | |
+| @brickbones | |
+| @iamgabrielma | |
+| @swissspidy | |
+| @dixitadusara | |
+| @ameeker | |
+| @StaggerLeee | |
+| @jblz | |
+| @nic-bertino | @nicbertino |
+| @rahmon | @rahmohn |
+| @vladanost | |
+| @gziolo | @gziolo |
+| @lancewillett
+| | @lynneux
+| | @betsela
+| | @fuyuko
+| | @msdesign21
+| @thrijith |
+| @Cloud887 |
+| @hblackett |
+| @vishalkakadiya |
+| @c-shultz |
+| @nfmohit-wpmudev |
+| @noisysocks | @noisysocks |
+| @omarreiss | @omarreiss |
+| @hedgefield | @hedgefield |
+| @hideokamoto | @hideokamoto |
+| @mirucon | @mirucon |
